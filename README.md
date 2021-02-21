@@ -1,4 +1,5 @@
 # Python-Cheatsheet
+Handy cheat sheet for ya.
 
 ## String Reference Cheat Sheet
 In Python, there are a lot of things you can do with strings. In this cheat sheet, you’ll find the most common string operations and string methods.
