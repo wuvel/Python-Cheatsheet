@@ -298,7 +298,7 @@ Classes and Instances
 - You can make objects do work by calling their methods.
 - The first parameter of the methods (self) represents the current instance.
 - Methods are just like functions, but they can only be used through a class.
-- 
+
 Special methods
 - Special methods start and end with `__`.
 - Special methods have specific names, like `__init__` for the constructor or `__str__` for the conversion to string.
