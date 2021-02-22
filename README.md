@@ -1,7 +1,7 @@
 # Python-Cheatsheet
 Handy cheat sheet for ya.
 
-## String Reference Cheat Sheet
+## String Reference 
 In Python, there are a lot of things you can do with strings. In this cheat sheet, you’ll find the most common string operations and string methods.
 
 ### String operations
@@ -149,7 +149,7 @@ Lists and tuples are both sequences, so they share a number of sequence operatio
 - [expression for variable in sequence] Creates a new list based on the given sequence. Each element is the result of the given expression.
 - [expression for variable in sequence if condition] Creates a new list based on the given sequence. Each element is the result of the given expression; elements only get added if the condition is true.  
 
-## Dictionary Methods Cheat Sheet
+## Dictionary Methods 
 ### Definition
 x = {key1:value1, key2:value2} 
 
