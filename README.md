@@ -289,3 +289,19 @@ to_seconds(hours, minutes, seconds)
 ```
 
 Docstrings are super useful for documenting our custom classes, methods, and functions, but also when working with new libraries or functions. You'll be extremely grateful for docstrings when you have to work with code that someone else wrote!
+
+### Additional info
+Classes and Instances
+- Classes define the behavior of all instances of a specific class.
+- Each variable of a specific class is an instance or object.
+- Objects can have attributes, which store information about the object.
+- You can make objects do work by calling their methods.
+- The first parameter of the methods (self) represents the current instance.
+- Methods are just like functions, but they can only be used through a class.
+- 
+Special methods
+- Special methods start and end with `__`.
+- Special methods have specific names, like `__init__` for the constructor or `__str__` for the conversion to string.
+
+Documenting classes, methods and functions
+- You can add documentation to classes, methods, and functions by using docstrings right after the definition.
