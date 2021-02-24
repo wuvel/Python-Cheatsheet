@@ -1,6 +1,8 @@
 # Python-Cheatsheet
 Handy cheat sheet for ya. Additional notes:
 - [Reading and Writing Files](https://docs.python.org/3/library/functions.html#open)
+- [OS Library](https://docs.python.org/3/library/os.html)
+- [OS.path](https://docs.python.org/3/library/os.path.html)
 
 ## String Reference 
 In Python, there are a lot of things you can do with strings. In this cheat sheet, you’ll find the most common string operations and string methods.
