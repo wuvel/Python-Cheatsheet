@@ -6,6 +6,8 @@ Handy cheat sheet for ya. Additional notes:
 - [Reading and Writing CSV](https://realpython.com/python-csv/)
 - [CSV Library](https://docs.python.org/3/library/csv.html)
 
+References: [Coursera](https://www.coursera.org/)
+
 ## String Reference 
 In Python, there are a lot of things you can do with strings. In this cheat sheet, you’ll find the most common string operations and string methods.
 
