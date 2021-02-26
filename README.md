@@ -5,6 +5,9 @@ Handy cheat sheet for ya. Additional notes:
 - [OS.path](https://docs.python.org/3/library/os.path.html)
 - [Reading and Writing CSV](https://realpython.com/python-csv/)
 - [CSV Library](https://docs.python.org/3/library/csv.html)
+- [Regex](https://docs.python.org/3/howto/regex.html)
+- [re Library](https://docs.python.org/3/library/re.html)
+- [Greedy vs Non-Greedy](https://docs.python.org/3/howto/regex.html#greedy-versus-non-greedy)
 
 References: [Coursera](https://www.coursera.org/)
 
