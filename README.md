@@ -28,7 +28,7 @@ In Python, there are a lot of things you can do with strings. In this cheat shee
 - string.replace(old, new) Returns a new string where all occurrences of old have been replaced by new.
 - delimiter.join(list of strings) Returns a new string with all the strings joined by the delimiter 
 
-## Formatting Strings Cheat Sheet
+## Formatting Strings 
 Python offers different ways to format strings. In the video, we explained the format() method. In this reading, we'll highlight three different ways of formatting strings. For this course you only need to know the format() method. But on the internet, you might find any of the three, so it's a good idea to know that the others exist.
 
 ### Using the format() method
@@ -87,7 +87,7 @@ If the placeholders include a colon, what comes after the colon is a formatting 
 
 More at [here](https://docs.python.org/3/library/string.html#format-specification-mini-language)
 
-### Old string formatting (Optional)
+### Old string formatting 
 The format() method was introduced in Python 2.6. Before that, the % (modulo) operator could be used to get a similar result. While this method is no longer recommended for new code, you might come across it in someone else's code. This is what it looks like:
 ```
 "base string with %s placeholder" % variable
@@ -110,7 +110,7 @@ Variables can be replaced by name using a dictionary syntax (we’ll learn about
 
 The formatting expressions are mostly the same as those of the format() method. 
 
-### Formatted string literals (Optional)
+### Formatted string literals 
 This feature was added in Python 3.6 and isn’t used a lot yet. Again, it's included here in case you run into it in the future, but it's not needed for this or any upcoming courses.
 
 A formatted string literal or f-string is a string that starts with 'f' or 'F' before the quotes. These strings might contain {} placeholders using expressions like the ones used for format method strings.
