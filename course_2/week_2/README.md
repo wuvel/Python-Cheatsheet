@@ -3,14 +3,14 @@ Table of Contents
 
   * Reading and Writing Files
     * Practice Notebook: Text Files <br>
-    `C2M2L1_Reading_And_Writing_Files.ipynb`
+    `01_text_files.ipynb`
   * Managing Files and Directories
     * Practice Quiz: Managing Files & Directories<br>
-    `Managing_Files_And_Directories.ipynb`
+    `02_managing_files_and_directories.ipynb`
   * Reading and Writing CSV Files
     * Practice Quiz: Reading & Writing CSV Files<br>
-    `Reading_And_Writing_CSV_Files.ipynb`
+    `03_reading_and_writing_csv_files.ipynb`
   * Module Review
     * Qwiklabs Assessment: Handling Files<br>
-    `generate_report.py`
+    `04_handling_files.py`
 
