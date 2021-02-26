@@ -8,6 +8,7 @@ Handy cheat sheet for ya. Additional notes:
 - [Regex](https://docs.python.org/3/howto/regex.html)
 - [re Library](https://docs.python.org/3/library/re.html)
 - [Greedy vs Non-Greedy](https://docs.python.org/3/howto/regex.html#greedy-versus-non-greedy)
+- [Train your regex skills here](https://regexcrossword.com/)
 
 References: [Coursera](https://www.coursera.org/)
 
