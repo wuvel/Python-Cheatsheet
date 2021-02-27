@@ -164,3 +164,37 @@ It’s worth noting, raw_input doesn’t natively exist in Python 3, but there a
 | input(x) is roughly the same as eval(raw_input(x)) | Input handles string as a generic string. It does not evaluate the string as a string expression |
 | raw_input() is preferred, unless the author wants to support evaluating string expressions | raw_input doesn’t exist, but with some tricky techniques, it can be supported | 
 | eval() is used to evaluate string expressions | eval() can be used the same as Python 2 |
+
+## Python Subprocesses
+### Running System Command in Python
+```
+>>> import subprocess
+>>> subprocess.run(["date"])
+Tue 07 Jan 2020 02:34:44 PM PST
+CompletedProcess(args=['date'], returncode=0)
+>>> subprocess.run(["sleep", "2"])
+CompletedProcess(args=['sleep', '2'], returncode=0)
+>>> result = subprocess.run(["ls", "not_a_valid_file"])
+ls: cannot access 'not_a_valid_file': No such file or directory
+>>> print(result.returncode)
+2
+```
+The return code will return after the command successfully executed.
+
+### Obtaining the Output of a System Command
+```
+>>> import subprocess
+>>> result = subprocess.run(["host", "8.8.8.8"], capture_output=True)
+>>> print(result.returncode)
+0
+>>> print(result.stdout.decode().split())
+['8.8.8.8.in-addr.arpa', 'domain', 'name', 'pointer', 'dns.google.']
+
+>>> result = subprocess.run(["rm", "abcdef"], capture_output=True)
+>>> print(result.returncode)
+1
+>>> print(result.stdout)
+b''
+>>> print(result.stderr
+b"rm: cannot remvoe 'abcdef': No such file or directory\n"
+```
