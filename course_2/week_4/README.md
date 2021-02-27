@@ -166,6 +166,8 @@ It’s worth noting, raw_input doesn’t natively exist in Python 3, but there a
 | eval() is used to evaluate string expressions | eval() can be used the same as Python 2 |
 
 ## Python Subprocesses
+More at:
+- [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)
 ### Running System Command in Python
 ```
 >>> import subprocess
