@@ -33,3 +33,6 @@ Ran 1 test in 0.000s
 OK
 """
 ```
+
+## Edge Case
+**Edge cases** are inputs to our code that produce unexpected results, and are found at the extreme ends of the ranges of input we imagine our programs will typically work with. Edge cases usually need special handling in scripts in order for the code to continue to behave correctly. In our rearranging example, we can handle this edge case by performing a simple check of the result variable before operating with it.
