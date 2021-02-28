@@ -138,3 +138,21 @@ def character_frequency(filename):
   f.close()
   return characters
 ```
+
+## Raise an Error
+```
+def validate_user(username, minlen):
+  # Using assertion
+  assert type(username) == str, "username must be a string"
+  
+  # Using raise
+  if minlen < 1:
+    raise ValueError("minlen must be at least 1")
+  
+  # Using return
+  if len(username) < minlen:
+    return False
+  if not username.isalnum():
+    return False
+  return True
+ ```
