@@ -157,3 +157,29 @@ def validate_user(username, minlen):
   return True
  ```
 We should use raise to check for conditions that we expect to happen during normal execution of our code and assert to verify situations that aren't expected but that might cause our code to misbehave.
+
+## Testing for Expected Errors
+```
+#!/usr/bin/env python3
+
+import unittest
+
+from validations
+import validate_user
+
+class TestValidateUser(unittest, TestCase):
+  def test_valid(self):
+    self.assertEqual(validate("validuser", 3), True)
+
+  def test_too_short(self):
+    self.assertEqual(validate("inv", 5), False)
+
+  def test_invalid_characters(self):
+    self.assertEqual(validate("invalid_user", 1), False)
+
+  def test_invalid_minlen(self):
+    self.assertRaises(ValueError, validate_user, "user", -1)
+
+# Run the tests
+unittest.main()
+```
