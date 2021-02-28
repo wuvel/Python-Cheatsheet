@@ -156,3 +156,4 @@ def validate_user(username, minlen):
     return False
   return True
  ```
+We should use raise to check for conditions that we expect to happen during normal execution of our code and assert to verify situations that aren't expected but that might cause our code to misbehave.
