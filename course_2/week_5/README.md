@@ -66,7 +66,7 @@ FAILED (errors=1)
 """
 ```
 
-## Recap
+## Unit Testing Library
 Best of Unit Testing Standard Library Module
 Understand a Basic Example:
 - [https://docs.python.org/3/library/unittest.html#basic-example](https://docs.python.org/3/library/unittest.html#basic-example)
@@ -94,3 +94,28 @@ Understand basic assertions:
 | assertNotIn(a, b)	| a not in b | 3.1 |
 | assertIsInstance(a, b) | isinstance(a, b) |	3.2 |
 | assertNotIsInstance(a, b) | not isinstance(a, b) | 3.2 |
+
+## Other Test Types
+**Black-box** tests are written with an awareness of what the program is supposed to do, its requirements or specifications, but not how it does it. Black-box tests are useful because they don't rely on the knowledge of how the system works.
+
+**White-box** tests are helpful because a test writer can use their knowledge of the source code to create tests that cover most of the ways that the program behaves.
+
+**Integration tests** verify that the interactions between the different pieces of code in integrated environments are working the way we expect them to. 
+
+**Regression tests** usually written as part of a debugging and troubleshooting process to verify that an issue or error has been fixed once it's been identified. Regression tests are useful part of a test suite because they ensure that the same mistake doesn't happen twice.
+
+When writing software **smoke test** serve as a kind of sanity check to find major bugs in a program. Smoke test answer basic questions like, does the program run? These tests are usually run before more refined testing takes place.
+
+**Load tests** verify that the system behaves well when it's under significant load. To actually perform these tests will need to generate traffic to our application simulating typical usage of the service.
+
+## Test-Driven Development
+**Test-driven development** or TDD calls for creating the test before writing the code. When presented with a new problem that can be solved by automation, your gut instinct might be to fire up your code editor and start writing.
+
+## More about tests
+Check out the following links for more information:
+- [https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/)
+- [https://landing.google.com/sre/sre-book/chapters/testing-reliability/](https://landing.google.com/sre/sre-book/chapters/testing-reliability/)
+- [https://testing.googleblog.com/2007/10/performance-testing.html](https://testing.googleblog.com/2007/10/performance-testing.html)
+- [https://www.guru99.com/smoke-testing.html](https://www.guru99.com/smoke-testing.html)
+- [https://www.guru99.com/exploratory-testing.html](https://www.guru99.com/exploratory-testing.html)
+- [https://testing.googleblog.com/2008/09/test-first-is-fun_08.html](https://testing.googleblog.com/2008/09/test-first-is-fun_08.html)
