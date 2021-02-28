@@ -119,3 +119,22 @@ Check out the following links for more information:
 - [https://www.guru99.com/smoke-testing.html](https://www.guru99.com/smoke-testing.html)
 - [https://www.guru99.com/exploratory-testing.html](https://www.guru99.com/exploratory-testing.html)
 - [https://testing.googleblog.com/2008/09/test-first-is-fun_08.html](https://testing.googleblog.com/2008/09/test-first-is-fun_08.html)
+
+## Try-except
+```
+def character_frequency(filename):
+  """Counts the frequency of each character in the given file."""
+  # First try to open the file
+  try:
+    f = open(filename)
+  except OSError:
+    return None
+
+  # Process the file
+  characters = {}
+  for line in f:
+    for char in line:
+      character[char] = characters.get(char, 0) + 1
+  f.close()
+  return characters
+```
