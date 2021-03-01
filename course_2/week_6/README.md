@@ -1,3 +1,21 @@
+Table of Contents
+-----------------
+
+  * Interacting with the Command Line
+    * Practice Quiz: Interacting with the Command Line <br>
+        * `01_interacting_with_the_command_line.ipynb`
+  * Bash Scripting
+    * Practice Quiz: Bash Scripting<br>
+        * `02_bash_scripting.ipynb`
+  * Advanced Bash Concepts
+    * Practice Quiz - Advanced Bash Concepts<br>
+        * `03_advanced_bash_concepts.ipynb`
+  * Module Review
+    * Qwiklabs Assessment: Editing Files Using Substrings<br>
+        * `04_findJane.sh`
+        * `04_changeJane.py`
+
+# Cheat sheet 
 ## Basic Linux Commands
 This list includes a bunch of different commands that are useful to know when working with Linux. Not all of these commands are covered in the videos, so feel free to investigate them on your own.
 
