@@ -64,3 +64,14 @@ Check out the following links for more information:
 - [https://linuxconfig.org/bash-scripting-tutorial-for-beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
 - [https://www.shellscript.sh](https://www.shellscript.sh)
 - [Recommended from me](https://devhints.io/bash)
+
+## Bash Scripting example
+Renaming all files ended with .HTM to .html:
+```
+#!/bin/bash
+
+for file in *.HTM; do
+    name=$(basename "$file" .HTM)
+    mv "$file" "$name.html"
+done
+```
