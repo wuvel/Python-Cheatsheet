@@ -1,3 +1,20 @@
+Table of Contents
+-----------------
+
+  * Data Streams
+    * Practice Quiz: Data Streams <br>
+        * `01_data_streams.ipynb`
+  * Python Subprocesses
+    * Practice Quiz: Python Subprocesses <br>
+        * `02_python_subprocesses.ipynb`
+  * Processing Log Files
+    * Practice Quiz: Processing Log Files <br>
+        * `03_processing_log_files.ipynb`
+  * Module Review
+    * Qwiklabs Assessment: Working with Log Files <br>
+        * `04_find_error.py`
+
+# Cheat sheet 
 ## Data Streams
 ### Reading Data interactively
 Using `input`. Example:
