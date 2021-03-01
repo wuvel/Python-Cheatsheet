@@ -11,7 +11,7 @@ Unit tests are used to verify that small isolated parts of a program are correct
 The goal of the unit test is to verify that small, isolated parts of a program are correct.
 
 ## Writing Unit Tests in Python
-```
+```python
 #!/usr/bin/env python3
 
 from rearrange import rearrange_name
@@ -38,7 +38,7 @@ OK
 **Edge cases** are inputs to our code that produce unexpected results, and are found at the extreme ends of the ranges of input we imagine our programs will typically work with. Edge cases usually need special handling in scripts in order for the code to continue to behave correctly. In our rearranging example, we can handle this edge case by performing a simple check of the result variable before operating with it.
 
 Example:
-```
+```python
 #!/usr/bin/env python3
 
 from rearrange import rearrange_name
@@ -121,7 +121,7 @@ Check out the following links for more information:
 - [https://testing.googleblog.com/2008/09/test-first-is-fun_08.html](https://testing.googleblog.com/2008/09/test-first-is-fun_08.html)
 
 ## Try-except
-```
+```python
 def character_frequency(filename):
   """Counts the frequency of each character in the given file."""
   # First try to open the file
@@ -140,7 +140,7 @@ def character_frequency(filename):
 ```
 
 ## Raise an Error
-```
+```python
 def validate_user(username, minlen):
   # Using assertion
   assert type(username) == str, "username must be a string"
@@ -159,7 +159,7 @@ def validate_user(username, minlen):
 We should use raise to check for conditions that we expect to happen during normal execution of our code and assert to verify situations that aren't expected but that might cause our code to misbehave.
 
 ## Testing for Expected Errors
-```
+```python
 #!/usr/bin/env python3
 
 import unittest
