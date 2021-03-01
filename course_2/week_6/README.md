@@ -57,3 +57,9 @@ These are some commands that are useful to know in Linux when interacting with p
 - `bg`: causes a job that was stopped to go to the background
 - `jobs`: lists the jobs currently running or stopped
 - `top`: shows the processes currently using the most CPU time (press "q" to quit)  
+
+## Bash Scripting Resources
+Check out the following links for more information:
+- [https://ryanstutorials.net/bash-scripting-tutorial/](https://ryanstutorials.net/bash-scripting-tutorial/)
+- [https://linuxconfig.org/bash-scripting-tutorial-for-beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
+- [https://www.shellscript.sh](https://www.shellscript.sh)
