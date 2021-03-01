@@ -67,7 +67,7 @@ Check out the following links for more information:
 
 ## Bash Scripting example
 Renaming all files ended with .HTM to .html:
-```
+```bash
 #!/bin/bash
 
 for file in *.HTM; do
