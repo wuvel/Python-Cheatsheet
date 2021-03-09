@@ -72,4 +72,17 @@ Table of Contents
 - By using a diff instead of the whole file, we can clearly see what they changed, no matter which version they were using. 
 - The patch command can detect that there were changes made to the file and will do its best to apply the diff anyways. It won't always succeed but in many cases it will. Another reason is structure.
 
-## 
+## What is version control?
+- A Version Control System keeps track of the changes that we make to our files. By using a VCS, we can know when the changes were made and who made them. It also lets us easily revert a change if it turned out not to be a good idea. It makes collaboration easier by allowing us to merge changes from lots of different sources.
+- A VCS keeps track of all the different versions that we create as we save our changes. 
+- We can make edits to multiple files and treat that collection of edits as a single change which is commonly known as a, commit.
+- Files are usually organized in repositories which contains separate software projects or just group all related code.
+
+## Version Control and Automation
+-  With a VCS, you can view, track and select snapshots from the history of your project. So nothing you do is lost, and since we can use a VCS to store both code and configuration files, we can make the overall IT systems more scalable and reliable. 
+
+## What is Git?
+- It's a distributed VCS, which means that each developer has a full copy of the repository. Because each contributor to a Git repo has a full copy of the repository, they can interact with the tracked files without needing a coordinating server. In turn, this improves collaboration.
+- Git doesn't rely on any kind of centralized server to provide control organizations to its workflow.
+- Repositories can be used by as many developers as needed. Because of the way Git was designed, repositories can be useful for any number of developers, from one to thousands.
+
