@@ -86,3 +86,64 @@ Table of Contents
 - Git doesn't rely on any kind of centralized server to provide control organizations to its workflow.
 - Repositories can be used by as many developers as needed. Because of the way Git was designed, repositories can be useful for any number of developers, from one to thousands.
 
+## First Steps with Git
+- Git commands:
+
+    ```bash
+    # Check git config
+    $ git config -l
+    
+    # Tell git who we are:
+    $ git config --global user.email "me@example.com"
+    $ git config --global user.name "John Doe"
+        
+    # Create empty repository:
+    $ mkdir checks
+    $ cd checks
+    $ git init
+        
+    # Add file:
+    $ git add something.py
+
+    # Check status
+    $ git status
+
+    # Commit to the .git directory:
+    $ git commit -m "message_here"
+
+    # Display git commit message:
+    $ git log
+    ```
+- The git directory acts as a database for all the changes tracked in Git and the working tree acts as a sandbox where we can edit the current versions of the files.
+- The staging area which is also known as the index is a file maintained by Git that contains all of the information about what files and changes are going to go into your next command.
+
+## Tracking Files
+- Any Git project will consist of three sections. The Git directory, the working tree, and the staging area.
+- The Git directory contains the history of all the files and changes. The working tree contains the current state of the project, including any changes that we've made. And the staging area contains the changes that have been marked to be included in the next commit.
+- Each time you make a commit, Git records a new snapshot of the state of your project at that moment.
+- When we operate with Git, our files can be either tracked or untracked. Tracked files are part of the snapshots, while untracked files aren't a part of snapshots yet.
+- If a file is in the modified state, it means that we've made changes to it that we haven't committed yet. The changes could be adding, modifying or deleting the contents of the file. 
+- The changes to those files are ready to be committed to the project called stage files.
+- Modified / Untracked (modify the code) -> Staged / Tracked (add the files via `git add`) -> Commited (commit the files).
+
+## Anatomy of a Commit Message
+- Good commit message is a short description of the change (up to 50 characters), followed by one or more paragraphs giving more details of the change (if needed).
+- Example running `git log`:
+
+    ```bash
+    ┌──(kali㉿kali)-[~/wuvel/wuvel-git/blog]
+    └─$ git log                                             
+    commit bc57b2121239b452c47a947f53afc794dc35e7c6 (HEAD -> main, origin/main, origin/HEAD)
+    Author: wuvel <gedelixa@gmail.com>
+    Date:   Sun Jan 3 06:08:17 2021 -0500
+
+        Updated config file
+
+    commit 8fdc9f7494ef87c42049aec4b9dad9e6009fd0b6
+    Author: wuvel <gedelixa@gmail.com>
+    Date:   Sun Jan 3 05:47:59 2021 -0500
+
+        Updated config with baseurl
+    ```
+    The first thing listed for each commit is its identifier, which is a long string of letters and numbers that uniquely identify each commit.
+
