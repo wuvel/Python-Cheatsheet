@@ -12,7 +12,7 @@ Table of Contents
         * `03_when_slowness_problems_get_complex.ipynb`
   * Module Review
     * Qwiklabs Assessment: Performance Tuning in Python Scripts <br>
-        * `04_dailysync.ipynb`
+        * `04_dailysync.py`
 
 # Recap
 ## Intro to Module 2: Slowness
