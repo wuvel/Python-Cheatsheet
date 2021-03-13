@@ -11,7 +11,8 @@ Table of Contents
     * Practice Quiz: When Slowness Problems Get Complex <br>
         * `03_when_slowness_problems_get_complex.ipynb`
   * Module Review
-    * Qwiklabs Assessment: Performance Tuning in Python Scripts
+    * Qwiklabs Assessment: Performance Tuning in Python Scripts <br>
+        * `04_dailysync.ipynb`
 
 # Recap
 ## Intro to Module 2: Slowness
@@ -183,3 +184,16 @@ Table of Contents
     ```
     To be able to run things in parallel, we'll need to create an executor. This is the process that's in charge of distributing the work among the different workers. The futures module provides a couple of different executors, one for using threads and another for using processes. We'll go with the ThreadPoolExecutor for now. we'll add a message saying that we're waiting for all threads to finish, and then call the shutdown function on the executor. This function waits until all the workers in the pool are done, and only then shuts down the executor.
 -  Threads use a bunch of safety features to avoid having two threads that try to write to the same variable.
+
+
+#!/usr/bin/env python3
+from multiprocessing import Pool
+def run(task):
+  # Do something with task here
+    print("Handling {}".format(task))
+if __name__ == "__main__":
+  tasks = ['task1', 'task2', 'task3']
+  # Create a pool of specific number of CPUs
+  p = Pool(len(tasks))
+  # Start each task within the pool
+  p.map(run, tasks)
