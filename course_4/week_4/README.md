@@ -1,17 +1,18 @@
 Table of Contents
 -----------------
 
-  * Why Programs Crash
-    * Practice Quiz: Why Programs Crash <br>
-        * `01_why_programs_crash.ipynb`
-  * Code that Crashes
-    * Practice Quiz: Code that Crashes <br>
-        * `02_code_that_cashes.ipynb` 
-  * Handling Bigger Incidents
-    * Practice Quiz: Handling Bigger Incidents <br>
-        * `03_handling_bigger_incidents.ipynb`
+  * Managing Computer Resources
+    * Practice Quiz: Managing Computer Resources <br>
+        * `01_managing_computer_resources.ipynb`
+  * Managing Our Time
+    * Practice Quiz: Managing Our Time <br>
+        * `02_managing_our_time.ipynb` 
+  * Making Our Future Lives Easier
+    * Practice Quiz: Making Our Future Lives Easier <br>
+        * `03_making_our_future_lives_easier.ipynb`
   * Module Review
-    * Qwiklabs Assessment: Fixing Errors in Python Scripts <br>
+    * Qwiklabs Assessment: Debugging and Solving Software Problems <br>
+        * `04_start_date_report.py`
 
 # Recap
 ## Memory Leaks and How to Prevent Them
