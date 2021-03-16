@@ -43,11 +43,11 @@
 -  Well-designed API will follow patterns and naming conventions. That means that the functions, classes and methods should have names that help you understand what to expect from them. 
 -  Example of using PIL:
 
-  ```python
-  from PIL import Image
-  im = Image.open("bride.jpg")
-  im.rotate(45).show()
-  ```
+    ```python
+    from PIL import Image
+    im = Image.open("bride.jpg")
+    im.rotate(45).show()
+    ```
 - For a Python library like PIL, the code is documented using docstrings.
 - PIL documentation using `help()`:
 
