@@ -269,3 +269,110 @@
   >>> print(people)
   [{'name': 'Sabrina Green', 'username': 'sgreen', 'phone': {'office': '802-867-5309', 'cell': '802-867-5310'}, 'department': 'IT Infrastructure', 'role': 'Systems Administrator'}, {'name': 'Eli Jones', 'username': 'ejones', 'phone': {'office': '684-348-1127'}, 'department': 'IT Infrastructure', 'role': 'IT Specialist'}, {'name': 'Melody Daniels', 'username': 'mdaniels', 'phone': {'cell': '846-687-7436'}, 'department': 'User Experience Research', 'role': 'Programmer'}, {'name': 'Charlie Rivera', 'username': 'riverac', 'phone': {'office': '698-746-3357'}, 'department': 'Development', 'role': 'Web Developer'}]
   ```
+
+## The Python Requests Library
+- When you visit a webpage with your web browser, the browser is making a series of HTTP requests to web servers somewhere out on the Internet. Those servers will answer with HTTP responses. This is also how we’re going to send and receive messages with web applications from our code.
+- The Python Requests library makes it super easy to write programs that send and receive HTTP. Instead of having to understand the HTTP protocol in great detail, you can just make very simple HTTP connections using Python objects, and then send and receive messages using the methods of those objects. Let's look at an example:  
+
+  ```bash
+  >>> import requests
+  >>> response = requests.get('https://www.google.com')
+  ```
+  That was a basic request for a web page! We used the Requests library to make a HTTP GET request for a specific URL, or Uniform Resource Locator. First 300 characters of response.text:
+  
+  ```bash
+  >>> print(response.text[:300])
+  <!doctype html><html itemscope="" itemtype="http://schema.org/WebPage" lang="de"><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"><title>Google</title><script nonce="dZfbIAn803LDGXS9
+  ```
+  Not that HTML can't be messy enough on its own, but let's look at the first bytes of the raw message that we received from the server:  
+
+  ```bash
+  >>> response = requests.get('https://www.google.com', stream=True)
+  >>> print(response.raw.read()[:100])
+  b'\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\xff\xc5Z\xdbz\x9b\xc8\x96\xbe\xcfS`\xf2\xb5-\xc6X\x02$t\xc28\xe3v\xdc\xdd\xee\xce\xa9\xb7\xdd;\xe9\x9d\xce\xf6W@\t\x88\x11`@>D\xd6\x9b\xce\xe5<\xc3\\\xcd\xc5\xfc\xab8\x08\xc9Nz\x1f.&\x8e1U\xb5j\xd5:\xfc\xb5jU\x15\x87;^\xe2\x16\xf7)\x97\x82b\x1e\x1d\x1d\xd2S'
+  ```
+  The response was compressed with gzip, so it had to be decompressed before we could even read the text of the HTML. The requests.Response object also contains the exact request that was created for us. We can check out the headers stored in our object to see that the Requests module told the web server that it was okay to compress the content:  
+
+  ```bash
+  >>> response.request.headers['Accept-Encoding']
+  'gzip, deflate'
+  ```
+  And then the server told us that the content had actually been compressed.  
+
+  ```bash
+  >>> response.headers['Content-Encoding']
+  'gzip'
+  ```
+  
+## Useful Operations for Python Requests
+- You can check out the value of Response.ok, which will be True if the response was good, and False if it wasn't.  
+
+  ```bash
+  >>> response.ok
+  True
+  ```
+- You can get the HTTP response code that was returned by looking at Response.status_code:  
+
+  ```bash
+  >>> response.status_code
+  200
+  ```
+- To write maintainable, stable code, you’ll always want to check your responses to make sure they succeeded before trying to process them further. For example, you could do something like this:  
+
+  ```python
+  response = requests.get(url)
+  if not response.ok:
+      raise Exception("GET failed with status code {}".format(response.status_code))
+  ```
+- We can use the Response.raise_for_status() method, which will raise an HTTPError exception only if the response wasn’t successful.  
+
+  ```python
+  response = requests.get(url)
+  response.raise_for_status()
+  ```
+- With requests.get(), you can provide a dictionary of parameters, and the Requests module will construct the correct URL for you! 
+
+  ```bash
+  >>> p = {"search": "grey kitten",
+  ...      "max_results": 15}
+  >>> response = requests.get("https://example.com/path/to/api", params=p)
+  >>> response.request.url
+  'https://example.com/path/to/api?search=grey+kitten&max_results=15'
+  ```
+  Query strings are handy when we want to send small bits of information, but as our data becomes more complex, it can get hard to represent it using query strings. 
+  
+- In our scripts, a POST request looks very similar to a GET request. Instead of setting the params attribute, which gets turned into a query string and appended to the URL, we use the data attribute, which contains the data that will be sent as part of the POST request.  
+
+  ```bash
+  >>> p = {"description": "white kitten",
+  ...      "name": "Snowball",
+  ...      "age_months": 6}
+  >>> response = requests.post("https://example.com/path/to/api", data=p)
+  ```
+  Response:
+  
+  ```bash
+  >>> response.request.url
+  'https://example.com/path/to/api'
+
+  >>> response.request.body
+  'description=white+kitten&name=Snowball&age_months=6'
+  ```
+- So, if we need to send and receive data from a web service, we can turn our data into dictionaries and then pass that as the data attribute of a POST request. Today, it's super common to send and receive data specifically in JSON format, so the Requests module can do the conversion directly for us, using the json parameter.  
+
+  ```bash
+  >>> response = requests.post("https://example.com/path/to/api", json=p)
+  >>> response.request.url
+  'https://example.com/path/to/api'
+  >>> response.request.body
+  b'{"description": "white kitten", "name": "Snowball", "age_months": 6}' 
+  ```
+  
+## What is Django?
+- Django is a full-stack web framework written in Python.
+- A full-stack web framework handles a bunch of different components that are typical when creating a web application. It contains libraries that help you handle each of the pieces: writing your application's code, storing and retrieving data, receiving web requests, and responding to them. 
+- Web frameworks are commonly split into three basic components: (1) the application code, where you'll add all of your application's logic; (2) the data storage, where you'll configure what data you want to store and how you're storing it; and (3) the web server, where you'll state which pages are served by which logic.
+- Django has a ton of useful components for building websites. In the lab project, Django will be used for serving the company website, including customer reviews. It does this by taking the request for a URL and parsing it using the urlresolver module. This is a core module in Django that interprets URL requests and matches them against a list of defined patterns. If a URL matches a pattern, the request is passed to the associated function, called a view. This allows you to serve different pages depending on what URL is being requested. You can even build complex logic into the function handling the request to make more dynamic, interactive, and exciting pages.
+- Django can also handle reading and writing data from a database, letting you store and retrieve data used by your application. In the lab, the database holds the customer reviews for the company. When a user loads the website, the logic will ask the database for all available customer reviews. These are retrieved and formatted into a web page, which is served as a response to the URL request. Django makes it easy to interact with data stored in a database by using an object-relational mapper, or ORM. This tool provides an easy mapping between data models defined as Python classes and an underlying database that stores the data in question.
+- On top of this, the Django application running in the lab includes an endpoint that can be used to add new customer reviews to the database. This endpoint is configured to receive data in JSON format, sent through an HTTP POST request. The data transmitted will then be stored in the database and added to the list of all reviews. The framework even generates an interactive web form, that lets us directly interact with the endpoint using our browser, which can be really handy for testing and debugging.
+
