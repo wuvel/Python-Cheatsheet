@@ -8,7 +8,7 @@ import emails
 fruits_dict = {}
 fruits_array = list()
 
-os.chdir("/home/student-02-c6bc602fd706/supplier-data/descriptions")
+os.chdir("/home/student-01-58646e03997a/supplier-data/descriptions")
 for filename in os.listdir("."):
   with open(filename) as f:
     fruits_dict['name'] = f.readline().strip()
