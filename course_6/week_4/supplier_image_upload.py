@@ -2,11 +2,9 @@
 import requests
 import os
 
-url = "http://35.184.240.44/upload/"
-with open('/usr/share/apache2/icons/icon.sheet.png', 'rb') as opened:
-    r = requests.post(url, files={'file': opened})
+url = "http://35.222.77.149/upload/"
+os.chdir("/home/student-01-58646e03997a/supplier-data/images/")
 
-os.chdir("/home/student-02-c6bc602fd706/supplier-data/images/")
 for filename in os.listdir("."):
   if not filename.endswith(".jpeg"):
       continue
