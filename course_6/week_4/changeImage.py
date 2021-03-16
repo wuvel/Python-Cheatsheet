@@ -3,7 +3,7 @@
 import os
 from PIL import Image
 
-path = "/home/student-02-c6bc602fd706/supplier-data/images/"
+path = "/home/student-01-58646e03997a/supplier-data/images/"
 os.chdir(path)
 for filename in os.listdir("."):
     if not filename.endswith(".tiff"):
